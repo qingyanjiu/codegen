@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: codegen
+  freemarker:
+    suffix: .ftl
+    charset: utf-8
+    template-loader-path: classpath:/templates/
+    enabled: true
