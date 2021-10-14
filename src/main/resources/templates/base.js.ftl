@@ -15,7 +15,7 @@
 import { onBuildingClick, afterBuildingFocused, inBuildingClick, onFloorClick, showFloorTool, hideFloorTool } from './handlers'
 
 export default {
-  <#list data as style>
+  <#list data.spec as style>
     ${style.name}: {
       beforeStageSet: [],
       afterStageSet: [],

@@ -38,7 +38,6 @@ public class GenService {
         log.info("已删除" + properties.getDistPath() + "下所有文件");
         log.info("生成base.js.ftl...");
         this.genFile("base.js.ftl", properties.getBaseStyle());
-        this.genFile("base.js.ftl", properties.getBaseStyle());
     }
 
     private <T> void genFile(String fileName, T params) {

@@ -27,10 +27,10 @@ public class MokuApplication {
 
     public static void main(String[] args) {
         ApplicationContext ac = SpringApplication.run(MokuApplication.class, args);
-//        GenService svc = ac.getBean(GenService.class);
-//        svc.doDen();
-        ParseSceneService parseSceneService = ac.getBean(ParseSceneService.class);
-        parseSceneService.parseJson().forEach((key, value) -> System.out.println(key + "" + value.getClass()));
+        GenService svc = ac.getBean(GenService.class);
+        svc.doDen();
+//        ParseSceneService parseSceneService = ac.getBean(ParseSceneService.class);
+//        parseSceneService.parseJson().forEach((key, value) -> System.out.println(key + "" + value.getClass()));
 //        StringTemplateLoader stringTemplateLoader = new StringTemplateLoader();
 //        stringTemplateLoader.putTemplate("fromdb", "<html><body>Hello fromdb ${name}</body></html>");
 //        Configuration freemarker = ac.getBean(Configuration .class);
