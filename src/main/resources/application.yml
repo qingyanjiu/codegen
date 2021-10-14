@@ -12,29 +12,41 @@ spring:
 codegen:
   distPath: D:\gen
   # 公用style，定义可以复用的几组style集合
-  baseStyles:
-    - name: park
-      config:
-        - "{ tagNames: ['changjing#', 'dasha'], style: { '3d.visible': true } }"
-    - name: building
-      config:
-        - "{ tagNames: ['lvhuaBlock', 'building', 'building3'], style: { '3d.visible': false } }"
-    - name: floor
-      config:
-        - "{ tagNames: ['lvhuaBlock', 'building', 'building3'], style: { '3d.visible': false } }"
+  baseStyle:
+    meta:
+      template: base.js.ftl
+      overrideFile: /src/scenes/stages/base.js
+    spec:
+      - name: park
+        config:
+          - "{ tagNames: ['changjing#', 'dasha'], style: { '3d.visible': true } }"
+      - name: building
+        config:
+          - "{ tagNames: ['lvhuaBlock', 'building', 'building3'], style: { '3d.visible': false } }"
+      - name: floor
+        config:
+          - "{ tagNames: ['lvhuaBlock', 'building', 'building3'], style: { '3d.visible': false } }"
 
   # 所有路由页面中需要配置的场景style
-  modules:
-    - name: generalIndex
-      routePath: '/visual/general'
-      #  使用的公用style名称
-      sceneType: park
-      # 该页面自定义的style列表，会覆盖公用的style
-      config:
-        - "{ tagNames: ['building_panel_block'], style: { '3d.visible': false } }"
+  module:
+    meta:
+      template: base.js.ftl
+      overrideFile: /src/scenes/stages/base.js
+    spec:
+      - name: generalIndex
+        routePath: '/visual/general'
+        #  使用的公用style名称
+        sceneType: park
+        # 该页面自定义的style列表，会覆盖公用的style
+        config:
+          - "{ tagNames: ['building_panel_block'], style: { '3d.visible': false } }"
 
   # 每个3D场景的默认配置
-  scenes:
-    - name: park
-      eye: "-1671, 589, 411"
-      center: "-399, 145, 417"
+  scene:
+    meta:
+      template: base.js.ftl
+      overrideFile: /src/scenes/stages/base.js
+    spec:
+      - name: park
+        eye: "-1671, 589, 411"
+        center: "-399, 145, 417"

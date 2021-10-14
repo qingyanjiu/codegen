@@ -1,0 +1,19 @@
+{
+  event: "",
+  stage: {
+    sceneType: "",
+    config: [
+      {
+        nodes: [],
+        style: {
+        }
+      }
+    ]
+  },
+  beforeStageSet: [],
+  afterStageSet: [],
+  inStageSet: [],
+  onLeave: [],
+  paramDef: [],
+  functionDef: []
+}

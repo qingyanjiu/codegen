@@ -2,6 +2,7 @@ package live.moku;
 
 import freemarker.template.Configuration;
 import freemarker.template.TemplateException;
+import live.moku.model.CodeGenProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,7 +37,8 @@ public class GenService {
         }
         log.info("已删除" + properties.getDistPath() + "下所有文件");
         log.info("生成base.js.ftl...");
-        this.genFile("base.js.ftl", properties.getBaseStyles());
+        this.genFile("base.js.ftl", properties.getBaseStyle());
+        this.genFile("base.js.ftl", properties.getBaseStyle());
     }
 
     private <T> void genFile(String fileName, T params) {

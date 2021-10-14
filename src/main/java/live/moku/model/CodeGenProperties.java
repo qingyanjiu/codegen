@@ -1,14 +1,8 @@
-package live.moku;
+package live.moku.model;
 
-import live.moku.model.BaseStyle;
-import live.moku.model.Module;
-import live.moku.model.Scene;
 import lombok.Data;
-import lombok.Getter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @ConfigurationProperties(prefix = "codegen", ignoreInvalidFields = true)
 @Component
@@ -17,10 +11,10 @@ public class CodeGenProperties {
 
     private String distPath;
 
-    private List<BaseStyle> baseStyles;
+    private BaseStyle baseStyle;
 
-    private List<Module> modules;
+    private Module module;
 
-    private List<Scene> scenes;
+    private Scene scene;
 
 }

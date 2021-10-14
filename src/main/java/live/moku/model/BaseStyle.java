@@ -5,9 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class BaseStyle {
+public class BaseStyle extends Meta {
 
-    private String name;
-
-    private List<String> config;
+    private List<BaseStyleSpec> spec;
 }

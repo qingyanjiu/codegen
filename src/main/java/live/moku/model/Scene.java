@@ -2,12 +2,10 @@ package live.moku.model;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
-public class Scene {
+public class Scene extends Meta {
 
-    private String name;
-
-    private String eye;
-
-    private String center;
+    private List<SceneSpec> spec;
 }
